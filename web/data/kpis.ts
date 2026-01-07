@@ -4,7 +4,7 @@ export const kpis: KPI = {
   totalRevenue: 8911407.90,
   totalCustomers: 4339,
   avgOrderValue: 480.76,
-  topCountry: "United Kingdom (354345)",
+  topCountry: "United Kingdom (354345 Orders)",
   revenueTrend: [
     { month: "Dec 2010", revenue: 572713.89 },
     { month: "Jan 2011", revenue: 569445.04 },
