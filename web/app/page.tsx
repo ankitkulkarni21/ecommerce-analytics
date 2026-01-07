@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { KPI } from "@/types/kpi";
 import KpiCard from "@/components/KpiCard";
 import RevenueChart from "@/components/RevenueChart";
+import { Github, Linkedin } from "lucide-react";
+
 
 export default function Dashboard() {
   const [data, setData] = useState<KPI | null>(null);
@@ -21,14 +23,38 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <header className="bg-white border-b px-10 py-6">
-        <h1 className="text-2xl text-gray-900 font-bold">
-          E-commerce Analytics
-        </h1>
-        <p className="text-gray-500">
-          Business performance overview
-        </p>
-      </header>
+      <header className="bg-white border-b px-10 py-6 flex items-center justify-between">
+  {/* Left */}
+  <div>
+    <h1 className="text-2xl text-gray-900 font-bold">
+      E-commerce Analytics
+    </h1>
+    <p className="text-gray-500">
+      Business performance overview
+    </p>
+  </div>
+
+  {/* Right */}
+  <div className="flex items-center gap-4">
+    <a
+      href="https://github.com/ankitkulkarni21/ecommerce-analytics"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-600 hover:text-black transition"
+    >
+      <Github size={22} />
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/ankitkulkarni21/"
+      rel="noopener noreferrer"
+      className="text-gray-600 hover:text-blue-600 transition"
+    >
+      <Linkedin size={22} />
+    </a>
+  </div>
+</header>
+
 
       <main className="p-10 space-y-10">
         {/* KPI Cards */}
